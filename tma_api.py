@@ -12,6 +12,14 @@ def hello_world():
 with open('acronymsList.json') as json_data:
     d = json.loads(json_data.read())
     
+@app.route('/json/<abr>')
+def abbreveJSON(abr=None):
+    for i in range(0, len(d)):
+        if d[i]['abbreve'] == abr or d[i]['abbreve'].lower() == abr or d[i]['abbreve'].upper() == abr:
+            return json.dumps(d[i])
+    else:
+        return json.dumps(d[0])
+    
 @app.route('/<abr>')
 def abbreve(abr=None):
     for i in range(0, len(d)):
