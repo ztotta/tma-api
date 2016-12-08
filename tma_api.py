@@ -6,17 +6,18 @@ import json
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return render_template('hello.html')
 
 with open('acronymsList.json') as json_data:
     d = json.loads(json_data.read())
     
-@app.route('/<query>')
-def abbreve(query):
+@app.route('/<abr>')
+def abbreve(abr=None):
     for i in range(0, len(d)):
-        if d[i]['abbreve'] == query or d[i]['abbreve'].lower() == query or d[i]['abbreve'].upper() == query:
+        if d[i]['abbreve'] == abr or d[i]['abbreve'].lower() == abr or d[i]['abbreve'].upper() == abr:
             abr = d[i]['abbreve']
             mean = d[i]['meaning']
-            return abr + " = " + mean
+            answer = abr + " = " + mean
+            return render_template('success.html', abr=answer)
     else:
-        return "Failure"
+        return render_template('failure.html')
