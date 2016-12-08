@@ -1,1 +1,1 @@
-web: python tma_api.py
+web: python dealscraper/tma_api.py
