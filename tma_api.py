@@ -8,7 +8,7 @@ import json
 def hello_world():
     return render_template('hello.html')
 
-with open('../acronymsList.json') as json_data:
+with open('acronymsList.json') as json_data:
     d = json.loads(json_data.read())
     
 @app.route('/<abr>')
