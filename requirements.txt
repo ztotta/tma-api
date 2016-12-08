@@ -8,7 +8,6 @@ macholib==1.5
 MarkupSafe==0.23
 modulegraph==0.10.1
 py2app==0.7.1
-pyobjc-core==2.3.2a0
 pyobjc-framework-AddressBook==2.3.2a0
 pyobjc-framework-AppleScriptKit==2.3.2a0
 pyobjc-framework-AppleScriptObjC==2.3.2a0
