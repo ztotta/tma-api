@@ -21,3 +21,6 @@ def abbreve(abr=None):
             return render_template('success.html', abr=answer)
     else:
         return render_template('failure.html')
+    
+if __name__ == "__main__":
+    app.run()

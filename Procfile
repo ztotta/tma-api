@@ -1,1 +1,1 @@
-web: python dealscraper/tma_api.py
+web: gunicorn app:app
