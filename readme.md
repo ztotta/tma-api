@@ -14,6 +14,9 @@ It's hosted on Heroku <a href="https://desolate-woodland-12241.herokuapp.com/">h
 ![](https://github.com/ztotta/ztotta/blob/master/img/tma-api/welcome.png?raw=true)
 --
 
+###Flask Server:
+![flas](https://github.com/ztotta/tma-api/blob/master/img/flask-server.png?raw=true)
+
 ###JSON response: 
 ![](https://github.com/ztotta/ztotta/blob/master/img/tma-api/json.png?raw=true)
 --
